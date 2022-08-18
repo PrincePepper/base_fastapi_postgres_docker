@@ -33,6 +33,7 @@ services:
   fastapi:
     container_name: fastapi_container
     image: fastapi
+    command: [ "uvicorn", "app.main:app","--host", "0.0.0.0","--reload","--debug" ]
     ports:
       - "8000:8000"
     volumes:
